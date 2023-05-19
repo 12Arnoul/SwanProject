@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--------Navbar--------->
+<nav class="container py-2 ">
+    <div class="hstack">
+        <img src="{% static 'media/logo_blue.png' %}" style="width: 155px; height: 50px;" alt="">
+        <div class="hstack ms-auto ">
+            <a href="" class="nav-item ">Accueil</a>
+            <a href="" class="nav-item ">Services</a>
+            <a href="" class="nav-item ">Nos réalisations</a>
+            <a href="" class="nav-item ">Notre équipe</a>
+            <a href="" class="nav-item ">À propos</a>
+            <a href="" class="nav-item ">Contact</a>
+        </div>
+        <div class="hstack ms-auto">
+            <a href="" class="nav_link ms-3"><i class="uil  fs-5 uil-instagram-alt"></i></a>
+            <a href="" class="nav_link ms-3"><i class="uil  fs-5 uil-youtube"></i></a>
+            <a href="" class="nav_link ms-3"><i class="uil  fs-5 uil-twitter"></i></a>
+            <a href="" class="nav_link ms-3"><i class="uil  fs-5 uil-facebook"></i></a>
+            <a href="" class="btn btn-danger">Obtenir un devis</a>
+        </div>
+    </div>
+</nav>
+<!--------Navbar End--------->
+<!--------Header Start--------->
+<header class="header row" style="background-image: url('{% static "media/header_bg.png" %}');">
+    <div class="row h-100 w-100 p-0">
+        <div class="col-lg-5">
+            <h1 class="text-white text-center">
+                <b class="text-white">SWAN</b>, l’agence numérique sur laquelle compter !
+            </h1>
+            <p class="text-white text-center">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.
+            </p>
+            <div class="text-center">
+                <div class="">
+                    <a href="" class="btn btn-white bg-white text-primary mx-3">
+                        <i class="uil uil-plus text-primary me-1 text-center"></i>
+                        Decouvrir
+                    </a>
+                    <a href="" class="btn btn-danger">
+                        Engagez-nous maintenant !
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--------Header End--------->
+<!--------about Start--------->
+<section class="about container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'media/about.png' %}" alt="" class="about_img">
+        </div>
+        <div class="col-md-6">
+            <h6 class="title text-uppercase">À propos de votre Entreprise</h6>
+            <div class="content-1">
+                <h3><span class="text-danger">SWAN</span>, nous sommes partenaire de vos innovations</h3><br>
+                <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+
+            <h3 class="text-marron">Nos valeurs</h3><br>
+            <p>
+                <i class="uil fs-5 uil-minus-square text-marron "></i>
+                It is a long established fact that a reader will be distracted.
+            </p>
+            <p>
+                <i class="uil fs-5 uil-minus-square text-marron "></i>
+                It is a long established fact that a reader will be distracted.
+            </p>
+            <p>
+                <i class="uil fs-5 uil-minus-square text-marron "></i>
+                It is a long established fact that a reader will be distracted.
+            </p>
+            <p>
+                <i class="uil fs-5 uil-minus-square text-marron "></i>
+                It is a long established fact that a reader will be distracted.
+            </p>
+            <p>
+                <i class="uil fs-5 uil-minus-square text-marron "></i>
+                It is a long established fact that a reader will be distracted.
+            </p>
+            <p>
+                <i class="uil fs-5 uil-minus-square text-marron "></i>
+                It is a long established fact that a reader will be distracted.
+            </p><br>
+            <a href="" class="btn btn-primary">En savoir plus</a>
+        </div>
+    </div>
+</section>
+<!--------about End--------->
+<!--------service Start--------->
+<section class="service" style="background-image: url('{% static "media/service_background.png" %}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h6 class="text-white fw-bold">Nos services disponibles</h6><br>
+                <h3 class="text-white fw-bold">En quoi <br> pouvons-nous <br><span class="text-blue">vous aider ?</span>
+                </h3>
+                <p class="text-white">Vero id posuere tempus aspernatur quaerat mollis voluptatum eveniet porro viverra
+                    libero habitasse porro fames quos pharetra diam cupidatat ligula ! Netus ! Quos dignissi mos
+                    laoreet.</p>
+                <a href="" class="btn btn-outline-primary text-white">Découvrez tous nos services</a>
+            </div>
+            <div class="col-lg-8">
+                <div class="row g-4">
+                    {% for service in services %}
+                    <div class="col-lg-4 ">
+                        <div class="service-1 text-white text-center">
+                            <img src="{{ service.image.url }}" class="" alt="">
+                            <h6 class="text-uppercase mt-4 mb-4">{{ service.name }}</h6>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--------service End--------->
+<!--------Redsection Start--------->
+<section class="redsection container">
+    <div class="row gy-4">
+        <div class="col-lg-5 hstack">
+            <img src="{% static 'media/call.png' %}" style="width: 60px;" alt="">
+            <div class="ms-3">
+                <p class="text-uppercase text-white">Obetenez une consultation gratuite</p>
+                <h6 class="text-white fw-bold">+229 00000000</h6>
+            </div>
+            <h1 class="text-white" style="font-size: 60px; padding-left: 80px;">|</h1>
+        </div>
+        <div class="col-lg-7 hstack">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="text-white ">
+                        Vero id posuere tempus aspernatur quaerat mollis voluptatum eveniet porro viverra libero
+                        habitasse Aut ab nibh aliqua optio veniet porro viverr.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <a href="">
+                        <button class="rounded border-0 text-5 p-2 py-md-3 bg-white- text-black-">
+                            Prendre rendez-vous
+                        </button>
+                    </a>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!--------ReDsection End--------->
+
+<section id="testimonys" class="bg-light">
+    <div class="row">
+        <div class="col-lg-3 offset-lg-1">
+            <div class="row h-100">
+                <div class="my-auto">
+                    <h6 class="text-6 text-black">
+                        Quelques commentaires de nos clients
+                    </h6>
+                    <h4 class="text-black text-1 fw-1000 lh-lg my-2">
+                        Ce que disent <br>
+                        <b class="text-danger text-1 fw-1000">
+                            nos clients
+                        </b>
+                    </h4>
+                    <p class="text-5 text-left text-black lh-lg">
+                        Vero id posuere tempus aspernatur quaerat mollis voluptatum eveniet porro viverra libero habitasse porro fames quos pharetra diam cupidatat ligula ! Netus ! Quos dignissi mos laoreet.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="p-3 h-100" style="background-color: #665d5d">
+                <div class="row g-3">
+                    {% for testimony in testimonys %}
+                    <div class="col-lg-6">
+                        <div class="testimony">
+                            <img src="{{ testimony.image.url }}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: -40px; margin-left: 10px; z-index: 1000;" alt="">
+                            <div class="rounded bg-dark p-3 pt-5">
+                                <p class="text-5 text-justify lh-lg text-white">
+                                    {{ testimony.content }}
+                                </p>
+                                <hr>
+                                <h6 class="hstack">
+                                    <span class="text-white text-5">John Smith</span>
+                                    <div class="hstack ms-auto">
+                                        <i class="uil uil-star fs-6 me-1 text-primary"></i>
+                                        <i class="uil uil-star fs-6 me-1 text-primary"></i>
+                                        <i class="uil uil-star fs-6 me-1 text-primary"></i>
+                                        <i class="uil uil-star fs-6 me-1 text-primary"></i>
+                                        <i class="uil uil-star fs-6 me-1 text-primary"></i>
+                                   </div>
+                                </h6>
+                                <p class="text-5 text-white mb-0">{{ testimony.provider }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1 py-5">
+                <h4 class="text-black lh-lg">
+                    Nous <b class="text-danger">rejoindre</b> <br>
+                    partout où vous êtes.
+                </h4>
+                <p class="text-5 lh-lg">
+                    Sint nascetur facere, delectus conubia consequuntur, nonummy distinctio ! Non officiis, id natus non nisl provident justo.
+                </p>
+                <div class="hstack">
+                    <i class="uil uil-location-point fs-5 p-2 px-3 rounded bg-blue text-white"></i>
+                    <div class="ms-3 vstack">
+                        <h6 class="text-blue mb-2">Adresse de bureau :</h6>
+                        <p class="text-5 mb-0">
+                            Bénin/Abomey-Calavi, Rue 33 Carre SWAN siège
+                        </p>
+                    </div>
+                </div>
+                <div class="hstack mt-3">
+                    <i class="uil uil-phone fs-5 p-2 px-3 rounded bg-blue text-white"></i>
+                    <div class="ms-3 vstack">
+                        <h6 class="text-blue mb-2">Numéro de téléphone :</h6>
+                        <p class="text-5 mb-0">
+                            <a href="tel:+229 00 00 00 00" class="text-color">
+                                +229 00 00 00 00
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="hstack mt-3">
+                    <i class="uil uil-envelope fs-5 p-2 px-3 rounded bg-blue text-white"></i>
+                    <div class="ms-3 vstack">
+                        <h6 class="text-blue mb-2">Adresse Email :</h6>
+                        <p class="text-5 mb-0">
+                            <a href="mailto:contact@swan-africa-tech@gmail.com" class="text-color">
+                                contact@swan-africa-tech@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 p-5">
+                <div class="row bg-light p-3 rounded">
+                    <h5 class="text-black fw-1000">
+                        Entrer en contact !
+                    </h5>
+                    <p class="text-5 my-2">
+                        Vero id posuere tempus aspernatur quaerat mollis voluptatum eveniet porro
+                    </p>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 mt-3">
+                                <input type="text" class="form-control" placeholder="Nom et Prénom(s)">
+                            </div>
+                            <div class="col-lg-6 mt-3">
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-lg-6 mt-3">
+                                <input type="text" class="form-control" placeholder="Téléphone">
+                            </div>
+                            <div class="col-lg-6 mt-3">
+                                <input list="objects" value="" placeholder="Objet" class="form-control">
+                                <datalist id="objects">
+                                <option value="Soummettre un projet">Soummettre un projet</option>
+                                <option value="Obtenir un devis">Obtenir un devis</option>
+                                <option value="Demander un partenariat">Demander un partenariat</option>
+                                </datalist>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                                <textarea name="" rows="3" class="form-control" placeholder="Message"></textarea>
+                            </div>
+                            <div class="mt-3">
+                                <input type="button" value="Envoyer mon message" class="button btn-sm px-3 py-2 bg-danger">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container rounded bg-primary p-3">
+    <div class="row g-3">
+        <div class="col-md-3">
+            <h3 class="text-white fs-3 fw-1000 text-center">3K+</h3>
+            <p class="text-white text-center mb-0">Projets archévés</p>
+        </div>
+        <div class="col-md-3">
+            <h3 class="text-white fs-3 fw-1000 text-center">20K+</h3>
+            <p class="text-white text-center mb-0">Clients satisfaits</p>
+        </div>
+        <div class="col-md-3">
+            <h3 class="text-white fs-3 fw-1000 text-center">13K+</h3>
+            <p class="text-white text-center mb-0">Projets recompenses</p>
+        </div>
+        <div class="col-md-3">
+            <h3 class="text-white fs-3 fw-1000 text-center">99%</h3>
+            <p class="text-white text-center mb-0">Taux de satisfaction</p>
+        </div>
+    </div>
+</section>
+<!---------Réa Start--------->
+<section class="realisation ">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
+</section>
+<!---------Réa End--------->
+<!---------Team Start--------->
+<section class="team py-5 bg-light container-fluid ">
+    <h4 class="text-black text-1 text-center fw-1000">Notre <b class="text-danger">Equipe</b></h4>
+    <p class="text-5 mb-4 text-center text-black">
+        Sint nascetur facere, delectus conubia consequuntur, nonummy distinctio! Non officiis, id natus non nisl provident justo.
+    </p>
+    <div class="row g-2">
+        {% for team in teams %}
+        <div class="col" >
+            <div>
+                <img src="{{ team.image.url }}" class="w-100 " style="border-radius: 25px 25px 0px 0px; height: 300px; object-fit: cover;" alt="" >
+                <div class="p-2 px-3 text-5 bg-danger" style="margin-bottom: -20px; border-radius: 0px 0px 20px 20px;">
+                    <h3 class="text-center text-3 text-white">
+                        {{ team.name }}
+                    </h3>
+                    <p class="text-white text-5 text-center mb-1 text-uppercase">{{ team.job }}</p>
+                </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!---------Team End--------->
+<!--------Footer Start---------->
+<footer class="bg-dark container-fluid">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-4">
+                <img src="{% static 'media/logo_white.png' %}" style="height: 50px; width: 155px;" alt="">
+                <p class="text-5 lh-lg text-justify ms-1 my-3" style="color: grey;">
+                    Auctor blandit dolorem primis eius odit soluta molestie ? Malesuada soluta elementum aut doloremque
+                    labo.
+                    elementum aut doloremque.
+                </p>
+            </div>
+            <div class="col-lg-2 ps-3">
+                <h6 class="mb-2 text-white ">Liens utiles</h6>
+                <ul class="p-0 m-0" style="list-style: none;">
+                    <li class="mt-2"><a href="" class="">À propos de nous</a></li>
+                    <li class="mt-2"><a href="" class="">Mention légale</a></li>
+                    <li class="mt-2"><a href="" class="">Contactez-nous</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="mb-2 text-white ">Coordonnées</h6>
+                <p class="mb-1 text-5 lh-lg" style="color: grey;">
+                    Bénin/Abomey-Calavi, Rue 33 Carre SWAN siège <br>
+                    Téléphone : <a href="tel:+22900000000" class="">+229 00 00 00 00</a> <br>
+                    Email : <a href="mailto:contact@swan.com" class="">contact@swan.com</a>
+                </p>
+            </div>
+            <div class="col-lg-3 ps-3">
+                <h6 class="mb-2 text-white ">Liens sociaux</h6>
+                <div class="vstack pb-2">
+                    <a href="" class=" mt-1">
+                        <i class="uil uil-instagram-alt fs-6 me-2"></i>
+                        Instagram
+                    </a>
+                    <a href="" class=" mt-1">
+                        <i class="uil uil-youtube fs-6 me-2"></i>
+                        Youtube
+                    </a>
+                    <a href="" class=" mt-1">
+                        <i class="uil uil-twitter fs-6 me-2"></i>
+                        Twitter
+                    </a>
+                    <a href="" class=" mt-1">
+                        <i class="uil uil-facebook fs-6 me-2"></i>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="m-0" style="background-color: grey;">
+        <div class="py-3 text-5 text-center text-center" style="color: grey;">
+            Copyright © {{ current_year }} SWAN AFRICA TECH. Tous les droits sont réservés.
+        </div>
+    </div>
+</footer>
+
+<!---------Footer End--------------->
+
+{% endblock %}

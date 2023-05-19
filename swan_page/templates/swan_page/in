@@ -1,0 +1,55 @@
+<!--------Footer start--------->
+<footer class="bg-dark container-fluid">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-4">
+                <img src="{% static 'media/logo_white.png' %}" style="height: 50px; width: 155px;" alt="">
+                <p class="text-5 lh-lg text-justify ms-1 my-3" style="color: grey;">
+                    Auctor blandit dolorem primis eius odit soluta molestie ? Malesuada soluta elementum aut doloremque labo.
+                    elementum aut doloremque.
+                </p>
+            </div>
+            <div class="col-lg-2 ps-3">
+                <h6 class="mb-2 text-white fw-bold">Liens utiles</h6>
+                <ul class="p-0 m-0" style="list-style: none;">
+                    <li class="mt-2"><a href="" class="footer_link">À propos de nous</a></li>
+                    <li class="mt-2"><a href="" class="footer_link">Mention légale</a></li>
+                    <li class="mt-2"><a href="" class="footer_link">Contactez-nous</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="mb-2 text-white fw-bold">Coordonnées</h6>
+                <p class="mb-1 text-5 lh-lg" style="color: grey;">
+                    Bénin/Abomey-Calavi, Rue 33 Carre SWAN siège <br>
+                    Téléphone : <a href="tel:+22900000000" class="footer_link">+229 00 00 00 00</a> <br>
+                    Email : <a href="mailto:contact@swan.com" class="footer_link">contact@swan.com</a>
+                </p>
+            </div>
+            <div class="col-lg-3 ps-3">
+                <h6 class="mb-2 text-white fw-bold">Liens sociaux</h6>
+                <div class="vstack pb-2">
+                    <a href="" class="footer_link mt-1">
+                        <i class="uil uil-instagram-alt fs-6 me-2"></i>
+                        Instagram
+                    </a>
+                    <a href="" class="footer_link mt-1">
+                        <i class="uil uil-youtube fs-6 me-2"></i>
+                        Youtube
+                    </a>
+                    <a href="" class="footer_link mt-1">
+                        <i class="uil uil-twitter fs-6 me-2"></i>
+                        Twitter
+                    </a>
+                    <a href="" class="footer_link mt-1">
+                        <i class="uil uil-facebook fs-6 me-2"></i>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="m-0">
+        <div class="py-3 text-5 text-center text-center" style="color: grey;">
+            Copyright © {{ current_year }} SWAN AFRICA TECH. Tous les droits sont réservés.
+        </div>
+    </div>
+</footer>

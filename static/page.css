@@ -1,0 +1,141 @@
+:root {
+    --blue: #00A1E6;
+    --danger: #E8465F;
+    --marron: rgb(150, 82, 21);
+    --teamColor: #ff5246;
+    
+    --body-font: 'Poppins', sans-serif;
+    
+}
+.text-danger{
+    color: var(--danger) !important;
+}
+.text-blue{
+    color: var(--blue)  !important;
+}
+.text-marron{
+    color: var(--marron) !important;
+}
+.bg-teamColor{
+    background-color: var(--teamColor)!important;
+}
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: var(--body-font);
+    margin: 0px;
+}
+a{
+    color: grey;
+    text-decoration: none;
+}
+
+/*Navbar*/
+.ms-auto{
+    margin-left: 80px !important;
+}
+
+.container .hstack{
+    padding-left: 30px;
+}
+
+.ms-auto .nav-item{
+    margin-left: 15px;
+    color: black;
+    text-decoration: none;
+}
+.ms-auto .btn{
+    margin-left: 1rem !important;
+}
+.nav_link{
+    color: var(--blue) !important;
+}
+
+/*Section header*/
+.header {
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+.header .row .col-lg-5{
+    margin: auto;
+}
+.header .row .col-lg-5 p
+{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+/*Section about*/
+.about{
+    margin-bottom: 30px;
+}
+.about .row{
+    padding-top: 30px;
+}
+ul{
+    list-style: none !important;
+}
+.col-md-6 .btn-primary{
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+/*Section service*/
+
+.service {
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 80vh;
+}
+.col-lg-4 .service-1{
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+/* Section Testimony */
+.testimony img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: -40px;
+    margin-left: 10px;
+    z-index: 1000;
+}
+
+/*Section Redsection*/
+.redsection{
+    background-color: #E31838;
+    border-radius: 30px;
+    padding-top: 15pxpx;
+    margin-top: -60px;
+    margin-bottom: auto;
+    height: 140px;
+}
+
+/* Team */
+
+.team .row .col img {
+    height: 300px;
+    z-index: 0 !important;
+    object-fit: cover;
+    border-radius: 25px 25px 0px 0px;
+}
+.team .row .col div {
+    border-radius: 0px 0px 25px 25px;
+    z-index: 1000 !important;
+    margin-bottom: -20px;
+}
+
+
+/*Footer*/
+
+footer{
+    margin-top: 10px;
+    padding: 30px;
+}
